@@ -1,7 +1,6 @@
 package company.zzw.john.beautyteam.fragment;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -12,7 +11,7 @@ import android.view.ViewGroup;
  * 基本的Fragment
  * Created by john on 2016/4/5.
  */
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends android.support.v4.app.Fragment {
 
     public Activity mActivity;
 
