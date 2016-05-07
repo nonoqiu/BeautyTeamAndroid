@@ -32,7 +32,7 @@ public abstract class BaseFragment extends android.support.v4.app.Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return initViews(inflater,container,savedInstanceState);
+        return initViews(inflater, container, savedInstanceState);
     }
 
 
@@ -53,7 +53,7 @@ public abstract class BaseFragment extends android.support.v4.app.Fragment {
                                    Bundle savedInstanceState);
 
     //初始化数据，可以不实现
-    private void initData() {
+    public void initData() {
 
     }
 

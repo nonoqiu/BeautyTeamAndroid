@@ -11,6 +11,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
 
 import java.util.ArrayList;
 
@@ -19,6 +24,7 @@ import company.zzw.john.beautyteam.adapter.MyPagerAdapter;
 import company.zzw.john.beautyteam.utils.DensityUtil;
 import company.zzw.john.beautyteam.utils.MyConstants;
 import company.zzw.john.beautyteam.utils.SpTools;
+import company.zzw.john.beautyteam.webserver.HttpServer;
 
 
 /**
@@ -34,6 +40,7 @@ public class GuideActivity extends Activity {
     private ArrayList<ImageView> pc_guides;
     private MyPagerAdapter adpter;
     private int distance;
+    private HttpServer http;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +87,9 @@ public class GuideActivity extends Activity {
         } else {
             vp_guide.setAdapter(adpter);
         }
+        //获取网络数据
+        http=new HttpServer();
+        http.getHelloWorld(getHelloWorldin);
 
     }
 
@@ -163,4 +173,18 @@ public class GuideActivity extends Activity {
         bt_startexp = (Button) findViewById(R.id.bt_guild_startexp);
 
     }
+
+    RequestCallBack<String> getHelloWorldin= new RequestCallBack<String>() {
+        @Override
+        public void onSuccess(ResponseInfo<String> responseInfo) {
+            Log.d("aaa",responseInfo.result);
+            Log.d("aaa","dasdadasdasd");
+
+        }
+
+        @Override
+        public void onFailure(HttpException e, String s) {
+            Toast.makeText(getApplicationContext(),"网络连接失败",Toast.LENGTH_SHORT).show();
+        }
+    };
 }
