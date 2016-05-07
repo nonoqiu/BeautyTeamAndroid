@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#FFFFFF"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_list_team_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingTop="10dp"
+            android:text="The Team Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_list_team_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingLeft="50dp"
+            android:paddingTop="10dp"
+            android:text="The Team Memembers and  The Leader"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="#F5A523" />
+
+</LinearLayout>

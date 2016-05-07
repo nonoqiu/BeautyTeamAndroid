@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#66666666"
     android:layout_height="match_parent">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#20AD5E">
-
         <TextView
             android:textColor="#FFFFFF"
             android:id="@+id/tv_common_title"
@@ -16,8 +16,8 @@
             android:layout_centerInParent="true"
             android:text="Team"
             android:textSize="25sp" />
-
         <TextView
+            android:id="@+id/tv_addTeam"
             android:textColor="#FFFFFF"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -27,6 +27,61 @@
             android:text="+"
             android:textSize="25dp"
             android:visibility="visible" />
-
     </RelativeLayout>
+
+    <View
+        android:background="#66666666"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_search_bg_">
+            <EditText
+                android:id="@+id/et_choosehospital_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#E7E7E7"
+                android:layout_weight="15"
+                android:hint="Search Team"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textSize="13sp"
+                android:paddingLeft="20dp"/>
+            <ImageView
+                android:id="@+id/img_choosehospital_search"
+                android:layout_width="wrap_content"
+                android:layout_height="15sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@mipmap/img_search"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:background="#66666666"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+
+    <ListView
+        android:background="#ffffff"
+        android:divider="#66666666"
+        android:dividerHeight="20dp"
+        android:id="@+id/lv_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+
 </LinearLayout>

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#66666666"
     android:orientation="vertical">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,17 +14,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Beauty Team"
+            android:text="Notice"
+            android:textColor="#FFFFFF"
             android:textSize="25sp" />
 
         <TextView
+            android:id="@+id/tv_addNotice"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:gravity="center"
+            android:textColor="#FFFFFF"
             android:layout_marginRight="1dp"
             android:text="+"
             android:textSize="25dp"
             android:visibility="visible" />
     </RelativeLayout>
+
+    <View
+        android:background="#66666666"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <ExpandableListView
+        android:background="#ffffff"
+        android:drawSelectorOnTop="false"
+        android:listSelector="#ffffff"
+        android:divider="#66666666"
+        android:dividerHeight="20dp"
+        android:id="@+id/lv_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ExpandableListView>
+
 </LinearLayout>
